@@ -13,7 +13,10 @@ class DriverServiceProvider extends ServiceProvider
      *
      * @var array
      */
-    protected $drivers = [];
+    protected $drivers = [
+        'BotMan\Drivers\AmazonAlexa\AmazonAlexaDriver',
+        'BotMan\Drivers\Web\WebDriver',
+    ];
 
     /**
      * @return void

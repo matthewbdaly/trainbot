@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "906681f0961b2cf3ccc29749dd9b1d8e",
+    "content-hash": "85532fcd13efa11427c8e58ad6e87f6f",
     "packages": [
         {
             "name": "botman/botman",
@@ -143,16 +143,16 @@
         },
         {
             "name": "botman/driver-web",
-            "version": "1.4.0",
+            "version": "1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/botman/driver-web.git",
-                "reference": "1bcbd3bf50f2f5526a55ea655b375bcc6162fccf"
+                "reference": "7399fd2994ee4c6c14c0a69268269e81fd2cd7f6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/botman/driver-web/zipball/1bcbd3bf50f2f5526a55ea655b375bcc6162fccf",
-                "reference": "1bcbd3bf50f2f5526a55ea655b375bcc6162fccf",
+                "url": "https://api.github.com/repos/botman/driver-web/zipball/7399fd2994ee4c6c14c0a69268269e81fd2cd7f6",
+                "reference": "7399fd2994ee4c6c14c0a69268269e81fd2cd7f6",
                 "shasum": ""
             },
             "require": {
@@ -197,7 +197,7 @@
                 "bot",
                 "web"
             ],
-            "time": "2018-01-21T20:58:57+00:00"
+            "time": "2018-03-27T10:19:41+00:00"
         },
         {
             "name": "botman/studio-addons",
