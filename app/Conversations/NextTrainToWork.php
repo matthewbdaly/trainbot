@@ -16,7 +16,7 @@ class NextTrainToWork extends Conversation
         $client = app()->make('App\Services\Train\Client');
         $response = $client->getDepartures("DIS", "NRW");
         $departures = collect(json_decode($response->getBody()->getContents()))['departures']->all;
-        eval(\Psy\Sh());
-        $this->say("The next train is at 2pm");
+        $time = $departures[0]->expected_departure_time;
+        $this->say("The next train is at $time");
     }
 }
