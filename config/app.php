@@ -219,4 +219,9 @@ return [
 
     ],
 
+    'transport' => [
+        'app_id' => env('TRANSPORT_APP_ID', ''),
+        'app_key' => env('TRANSPORT_APP_KEY', ''),
+    ],
+
 ];

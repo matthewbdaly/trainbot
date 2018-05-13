@@ -6,6 +6,7 @@ use BotMan\BotMan\BotMan;
 use Illuminate\Http\Request;
 use App\Conversations\ExampleConversation;
 use App\Conversations\TrainTimes;
+use App\Conversations\NextTrainToWork;
 
 class BotManController extends Controller
 {
@@ -39,5 +40,10 @@ class BotManController extends Controller
     public function getTrainTime(Botman $bot)
     {
         $bot->startConversation(new TrainTimes());
+    }
+
+    public function getNextTrainToWork(Botman $bot)
+    {
+        $bot->startConversation(new NextTrainToWork());
     }
 }
