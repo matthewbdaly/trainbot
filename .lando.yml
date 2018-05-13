@@ -1,0 +1,20 @@
+name: trainbot
+recipe: laravel
+config:
+  webroot: public
+  via: nginx
+  php: 7.2
+  database: mariadb:10.2
+  cache: redis
+services:
+  pma:
+    type: phpmyadmin:4.6
+    hosts: database
+  search:
+    type: elasticsearch:5.5
+    portforward: 9999
+proxy:
+  pma:
+    - pma.trainbot.lndo.site
+  search:
+    - elasticsearch.trainbot.lndo.site
