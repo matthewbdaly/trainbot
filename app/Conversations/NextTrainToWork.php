@@ -17,6 +17,6 @@ class NextTrainToWork extends Conversation
         $response = $client->getDepartures("DIS", "NRW");
         $departures = collect(json_decode($response->getBody()->getContents()))['departures']->all;
         $time = $departures[0]->expected_departure_time;
-        $this->say("The next train is at $time");
+        $this->say("The next train is expected at $time");
     }
 }
