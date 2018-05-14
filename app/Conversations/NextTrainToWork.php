@@ -13,7 +13,7 @@ class NextTrainToWork extends Conversation
      */
     public function run()
     {
-        $client = app()->make('App\Services\Train\Client');
+        $client = app()->make('Matthewbdaly\TransportApi\Contracts\Client');
         $response = $client->getDepartures("DIS", "NRW");
         $departures = collect(json_decode($response->getBody()->getContents()))['departures']->all;
         $time = $departures[0]->expected_departure_time;
