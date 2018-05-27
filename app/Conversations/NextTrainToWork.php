@@ -15,10 +15,9 @@ class NextTrainToWork extends Conversation
     {
         $client = app()->make('Matthewbdaly\TransportApi\Contracts\Client');
         $response = $client->getDepartures("DIS", "NRW");
-        $departures = collect(json_decode($response->getBody()->getContents()))['departures']->all;
-        $time = $departures[0]->expected_departure_time;
+        $content = collect(json_decode($response->getBody()->getContents()));
+        $time = $content['departures']->all[0]->expected_departure_time;
         $this->getBot()
-             ->reply("The next train is expected at $time")
-             ->stopsConversation();
+             ->reply("The next train is expected at $time");
     }
 }
