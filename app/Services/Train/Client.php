@@ -6,8 +6,9 @@ use Http\Client\HttpClient;
 use Http\Message\MessageFactory;
 use Http\Discovery\HttpClientDiscovery;
 use Http\Discovery\MessageFactoryDiscovery;
+use App\Contracts\Services\Train\Client as ClientContract;
 
-class Client
+class Client implements ClientContract
 {
     protected $client;
 
